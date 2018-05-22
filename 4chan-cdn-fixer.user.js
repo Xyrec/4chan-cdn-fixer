@@ -9,6 +9,6 @@
 
 $(function(){
     $("a").each(function() {
-        this.href = this.href.replace('is2.4chan.org' , 'i.4cdn.org');
+        this.href = this.href.replace('is2.4chan' , 'i.4cdn');
     });
 });
