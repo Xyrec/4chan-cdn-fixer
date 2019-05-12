@@ -8,8 +8,27 @@
 // @require                     https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
 // ==/UserScript==
 
-$(function(){
-    $("a").each(function() {
-        this.href = this.href.replace('is2.4chan' , 'i.4cdn');
-    });
-});
+var links,thisLink;
+links = document.evaluate("//a[contains(@href, 'is.4chan')]",
+    document,
+    null,
+    XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
+    null);
+for (var i=0;i<links.snapshotLength;i++) {
+    var thisLink = links.snapshotItem(i);
+
+    thisLink.href = thisLink.href.replace('is.4chan.org/',
+                                          'i.4cdn.org/');
+}
+var links,thisLink;
+links = document.evaluate("//a[contains(@href, 'is2.4chan')]",
+    document,
+    null,
+    XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
+    null);
+for (var i=0;i<links.snapshotLength;i++) {
+    var thisLink = links.snapshotItem(i);
+
+    thisLink.href = thisLink.href.replace('is2.4chan.org/',
+                                          'i.4cdn.org/');
+}
