@@ -3,6 +3,7 @@
 // @description                 Reverts is2.4chan.org CDN to the one at i.4cdn.org
 // @author                      Xyrec
 // @version                     1.1
+// @updateURL                   https://raw.githubusercontent.com/Xyrec/4chan-cdn-fixer/master/4chan-cdn-fixer.user.js
 // @include                     *.4chan.org/*
 // @include                     *.4channel.org/*
 // @require                     https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
